@@ -1,0 +1,107 @@
+Required Libraries:
+--------------------------
+pandas
+pymysql
+sqlalchemy
+psycopg2
+
+
+Step-by-Step Guide for Beginners
+--------------------------------
+
+1. Set Up Your Environment
+--------------------------
+
+For macOS:
+----------
+- First, install Homebrew if not installed (a package manager for Mac):
+  Open Terminal and run:
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+- Then, install Python (if it's not already installed):
+  brew install python
+
+- Install pip (a tool to install Python packages):
+  sudo easy_install pip
+
+
+For Windows:
+------------
+- Download and install Python from the official website: https://www.python.org/
+- During installation, make sure to check the box that says "Add Python to PATH".
+- pip usually comes with Python. To make sure it's up to date, open Command Prompt and run:
+  python -m ensurepip --upgrade
+
+
+2. Set Up Kaggle API
+--------------------
+
+For both macOS and Windows:
+- Create a Kaggle account at https://www.kaggle.com/
+- Go to your Kaggle Account Settings and click "Create New API Token".
+- This will download a file named kaggle.json.
+
+Then follow these steps:
+
+macOS:
+------
+- Create a directory for Kaggle configuration
+- Open Terminal and run:
+   mkdir ~/.Kaggle
+- Move kaggle.json to the Kaggle directory
+- Use the following commands to copy the kaggle.json file:     
+  mv ~/Downloads/kaggle.json ~/.kaggle/
+- Set the permissions for kaggle.json
+  chmod 600 ~/.kaggle/kaggle.json
+
+Windows:
+--------
+- Create a directory for Kaggle configuration
+- Open Command Prompt and run:
+  mkdir %USERPROFILE%\.Kaggle
+- Move kaggle.json to the Kaggle directory
+- Use the following commands to copy the kaggle.json file:   
+  copy %USERPROFILE%\Downloads\kaggle.json %USERPROFILE%\.kaggle\
+
+macOS:
+------
+- Open Terminal and run:
+  mkdir ~/.kaggle
+  mv ~/Downloads/kaggle.json ~/.kaggle/
+  chmod 600 ~/.kaggle/kaggle.json
+
+Windows:
+--------
+- Open Command Prompt and run:
+  mkdir %USERPROFILE%\.kaggle
+  copy %USERPROFILE%\Downloads\kaggle.json %USERPROFILE%\.kaggle\
+
+3. Download Datasets Using Kaggle API
+-------------------------------------
+
+- Open your Terminal (macOS) or Command Prompt (Windows).
+- Go to the folder where you want to save the dataset:
+  cd path/to/your/folder
+
+- Download the dataset (replace 'dataset-name' with the actual name from Kaggle):
+  kaggle datasets download -d dataset-name
+
+- Unzip the downloaded file:
+  unzip dataset-name.zip
+
+
+4. Install Libraries
+---------------------------
+- These are useful libraries for data analysis.
+- Install them by running the following command:
+  pip install pandas numpy matplotlib seaborn scikit-learn
+
+
+Summary:
+--------
+1. **Environment Setup:** Install Homebrew (macOS) or Python (Windows).
+2. **Kaggle API Setup:** Generate API token and configure kaggle.json.
+3. **Download Datasets:** Use Kaggle API commands to download datasets and unzip them.
+4. **Install Libraries:** Use pip to install required libraries for data analysis.
+
+You're now ready to begin your data project!
